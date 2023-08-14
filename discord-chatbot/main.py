@@ -3,15 +3,13 @@ from dotenv import load_dotenv
 import openai
 import discord
 
-# Add variables
-load_dotenv()
-
 # Add intents
 intents = discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents = intents)
 
 # Get token and key
+load_dotenv()
 BOT_TOKEN = os.getenv('BOT_TOKEN')
 OPENAI_KEY = os.getenv('OPENAI_KEY')
 
